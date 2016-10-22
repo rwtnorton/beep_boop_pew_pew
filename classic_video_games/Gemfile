@@ -1,0 +1,30 @@
+source 'https://rubygems.org'
+
+gem 'rails', '3.2.22.5'
+
+gem 'sqlite3'
+
+
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails',       '~> 3.2.3'
+  gem 'bootstrap-sass',   '3.2.0.2' # Rails 3 compatible
+  gem 'sprockets-rails'
+  gem 'coffee-rails',     '~> 3.2.1'
+  gem 'uglifier',         '>= 1.0.3'
+end
+
+gem 'jquery-rails'
+gem 'will_paginate-bootstrap'
+
+group :development do
+  gem 'rspec-rails',      '~> 3.5.2'
+end
+
+group :test do
+  gem 'rspec',            '~> 3.5.0'
+  gem 'capybara',         '~> 2.8.1'
+
+  gem 'test-unit', '~> 3.0' ## model tests complain otherwise
+end

@@ -1,0 +1,52 @@
+name,year,manufacturer,notes,is_active
+1942,1984,Capcom,Capcom's first hit game,1
+Asteroids,1979,Atari,Atari's most successful coin-operated game.,1
+Battlezone,1980,Atari,"Custom cabinet with novel dual-joystick controls, using two 2-way joysticks for movement, and periscope-like viewer.",1
+Berzerk,1980,Stern Electronics,Early use of speech synthesis was also translated into other languages in Europe.,1
+BurgerTime,1982,Data East (Japan) / Bally Midway (US),Original title changed from Hamburger when brought to the U.S. from Japan,1
+Centipede,1980,Atari,"One of the first games to use trackball control, vertical monitor orientation.",1
+Defender,1980,Williams Electronics,"Was predicted to be outsold by Rally-X, but Defender trounced it, going on to sell 60,000 units",1
+Dig Dug,1982,Namco (Japan) / Atari (North America),Rated the sixth most popular coin-operated video game of all time,1
+Donkey Kong,1981,Nintendo,"Laid foundations for platform game genre as well as visual storytelling in video games, and introduced Mario, the character who would become Nintendo's mascot.",1
+Donkey Kong Junior,1982,Nintendo,"The last time Nintendo's mascot, Mario, was featured as an antagonist in a Nintendo game",0
+Dragon's Lair,1983,Cinematronics (U.S.) / Taito (Japan),"An early laserdisc video game, which allowed film-quality animation in the game.",1
+Elevator Action,1983,Taito,An action game where the protagonist must traverse the building's numerous levels via a series of elevators and escalators while acquiring documents,1
+Frogger,1981,Konami (Japan) / Sega-Gremlin (North America),Novel gameplay free of fighting and shooting,1
+Galaga,1981,Namco (Japan) / Midway (North America),"Leapfrogged its predecessor, Galaxian, in popularity",1
+Galaxian,1979,Namco (Japan) / Midway (U.S.),Created to compete with Space Invaders. Featured a color screen and had aliens attack in swooping formation.,true
+Gorf,1981,Midway,"Consisted of several levels, some of which were clones of other popular games. Featured synthesized speech.",1
+Gravitar,1982,Atari,"Not popular in the arcades due to its difficulty, but historically significant as the gameplay inspired many popular clones like Thrust and Oids.",1
+Gyruss,1983,Konami (Japan) / Centuri (U.S.),"Often remembered for its musical score that plays throughout the game, Bach's ""Toccata and Fugue in D minor""",1
+Joust,1982,Williams Electronics,"Contained a design flaw so popular it was intentionally touted by producers as a ""hidden feature""",1
+Jungle King,1982,Taito,"An early side-scrolling (and diagonal-scrolling) platformer, featuring vine-swinging mechanics, run & jump sequences, climbing hills, and swimming.",1
+Lunar Lander,1979,Atari,First Atari game to use vector graphics,1
+Mappy,1983,Namco (Japan) / Bally Midway (U.S.),Featured early side-scrolling platforming action,1
+Mario Bros.,1983,Nintendo,"The first game featuring Nintendo's mascot, Mario, along with his brother, Luigi",1
+Missile Command,1980,Atari,"One of the first games to use trackball control. Originally to have a localities-option that named the cities, but was determined too complicated.",1
+Moon Patrol,1982,Irem (Japan) / Williams Electronics (U.S.),The first arcade game to feature parallax scrolling.,0
+Ms. Pac-Man,1981,Midway (North America) / Namco,Created from a bootlegged hack of Pac-Man.,1
+Pac-Man,1980,Namco (Japan) / Midway (U.S.),"One of the most popular and influential games, it had the first gaming mascot, established maze chase genre, opened gaming to female audiences, and introduced power-ups and cutscenes.",Y
+Paperboy,1984,Atari,Novel controls and high resolution display,1
+Pengo,1982,Sega,"A maze game set in an environment full of ice blocks, which can be used by the player's penguin, who can slide them to attack enemies.",true
+Phoenix,1980,Amstar Electronics / Centuri (U.S.) / Taito (Japan),Notable for its haunting melody accompaniment. One of the first games to feature a boss battle.,1
+Pole Position,1982,Namco (Japan) / Atari (U.S.),"A racing video game that popularized the third-person ""rear-view racer format"" player perspective",1
+Punch-Out!!,1984,Nintendo,"A boxing fighting game featuring digitized voices, dual monitors, a third-person perspective, and 3D wire-frame graphics.",1
+Q*bert,1982,Gottlieb,Became one of the most merchandised arcade games behind Pac-Man and Donkey Kong.,1
+Qix,1981,Taito,The objective is to fence off a supermajority of the play area,1
+Rally-X,1980,Namco,"First game to feature a ""bonus"" round, background music, and a radar. When released, was predicted to outsell two other new releases: Pac-Man and Defender.",1
+Robotron 2084,1982,Williams Electronics,Featured novel dual joystick gameplay,1
+Scramble,1981,Konami (Japan) / Stern (North America),Horizontal scrolling shooter game,1
+Space Invaders,1978,Taito (Japan) / Midway (U.S.),"Considered the game that revolutionized the video game industry. The first blockbuster video game, it established the shoot 'em up genre, and has influenced most shooter games since.",1
+Spy Hunter,1983,Bally Midway,"Memorable for its music, ""The Peter Gunn Theme"", that plays throughout the game",yes
+Star Castle,1980,Cinematronics,The colors of the rings and screen are provided by a transparent plastic screen overlay,Yes
+Star Trek,1982,Sega,"Space combat sim featuring five different controls, six different enemies, and 40 different simulation levels. One of the most elaborate vector games released.",1
+Star Wars,1983,Atari,Features several digitized samples of actors' voices from the movie,1
+Tapper,1983,Bally Midway,"Originally aligned with American beer Budweiser, was revamped as Root Beer Tapper, so as not to be construed as attempting to peddle alcohol to minors",1
+Tempest,1980,Atari,One of the first games to use a color vector display,1
+Time Pilot,1982,Konami (Japan) / Centuri (U.S.),"Time travel themed aerial combat game with free-roaming gameplay in open air space that scrolls indefinitely in all directions, with player's plane always remaining centered.",1
+Track & Field,1983,Konami (Japan) / Centuri (North America),The first Olympic-themed sports game.,0
+Tron,1982,Bally Midway,Earned more than the film it was based on,1
+Vanguard,1981,SNK (Japan) / Centuri (US),"Early scrolling shooter that scrolls in multiple directions, and allows shooting in four directions, using four direction buttons, similar to dual-stick controls.",0
+Wizard of Wor,1980,Midway,Game featured maze-like dungeons infested with monsters and aliens.,1
+Xevious,1982,Namco (Japan) / Atari (U.S.),The first arcade video game to have a TV commercial. It was also responsible for popularizing vertical scrolling shooters.,1
+Zaxxon,1982,Sega,"First game to employ isometric axonometric projection, which the game was named after",1

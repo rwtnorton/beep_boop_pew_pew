@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_13_043515) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_13_044357) do
   create_table "games", force: :cascade do |t|
     t.string "name", null: false
     t.integer "publication_year"
@@ -20,6 +20,17 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_13_043515) do
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_games_on_name"
     t.index ["publication_year"], name: "index_games_on_publication_year"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.integer "game_id", null: false
+    t.string "ip_addr", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["created_at"], name: "index_likes_on_created_at"
+    t.index ["game_id", "ip_addr"], name: "index_likes_on_game_id_and_ip_addr", unique: true
+    t.index ["game_id"], name: "index_likes_on_game_id"
+    t.index ["ip_addr"], name: "index_likes_on_ip_addr"
   end
 
   create_table "manufacturers", force: :cascade do |t|

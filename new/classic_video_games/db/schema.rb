@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_13_044357) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_13_044913) do
   create_table "games", force: :cascade do |t|
     t.string "name", null: false
     t.integer "publication_year"
@@ -18,6 +18,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_13_044357) do
     t.boolean "is_active", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "likes_count", default: 0, null: false
     t.index ["name"], name: "index_games_on_name"
     t.index ["publication_year"], name: "index_games_on_publication_year"
   end

@@ -48,35 +48,35 @@ describe Game do
         end
       end
 
-    #   describe "likes" do
-    #
-    #     it "should have a likes attribute" do
-    #       expect(game).to respond_to(:likes)
-    #     end
-    #
-    #     it "should have the correctly associated likes" do
-    #       lks = game.likes.create!([{ip_addr: '10.0.1.1'},
-    #                                 {ip_addr: '10.0.1.2'}])
-    #       expect(game.like_ids.to_set).to eq(lks.map(&:id).to_set)
-    #       expect(game.likes.to_set).to eq(lks.to_set)
-    #     end
-    #
-    #     it "should have a likes_count as an optimization" do
-    #       expect(game).to respond_to(:likes_count)
-    #       expect(game.likes_count).to eq(0)
-    #       expect(game.likes.size).to eq(game.likes_count)
-    #
-    #       game.likes.create!(ip_addr: '10.0.1.1')
-    #       game.reload
-    #       expect(game.likes_count).to eq(1)
-    #       expect(game.likes.size).to eq(game.likes_count)
-    #
-    #       game.likes.create!(ip_addr: '10.0.1.2')
-    #       game.reload
-    #       expect(game.likes_count).to eq(2)
-    #       expect(game.likes.size).to eq(game.likes_count)
-    #     end
-    #   end
+      describe "likes" do
+
+        it "should have a likes attribute" do
+          expect(game).to respond_to(:likes)
+        end
+
+        it "should have the correctly associated likes" do
+          lks = game.likes.create!([{ip_addr: '10.0.1.1'},
+                                    {ip_addr: '10.0.1.2'}])
+          expect(game.like_ids.to_set).to eq(lks.map(&:id).to_set)
+          expect(game.likes.to_set).to eq(lks.to_set)
+        end
+
+        it "should have a likes_count as an optimization" do
+          expect(game).to respond_to(:likes_count)
+          expect(game.likes_count).to eq(0)
+          expect(game.likes.size).to eq(game.likes_count)
+
+          game.likes.create!(ip_addr: '10.0.1.1')
+          game.reload
+          expect(game.likes_count).to eq(1)
+          expect(game.likes.size).to eq(game.likes_count)
+
+          game.likes.create!(ip_addr: '10.0.1.2')
+          game.reload
+          expect(game.likes_count).to eq(2)
+          expect(game.likes.size).to eq(game.likes_count)
+        end
+      end
     end
   end
 end

@@ -32,22 +32,22 @@ describe Game do
       expect(dup).to be_invalid
     end
 
-    # describe "associations" do
-    #   let(:game) { Game.create!(valid_attrs) }
-    #
-    #   describe "manufacturers" do
-    #
-    #     it "should have a manufacturers attribute" do
-    #       expect(game).to respond_to(:manufacturers)
-    #     end
-    #
-    #     it "should have the correctly associated manufacturers" do
-    #       m = game.manufacturers.create!(company: "Atari", region: "US")
-    #       expect(game.manufacturer_ids.to_set).to eq(Set[m.id])
-    #       expect(game.manufacturers.to_set).to eq(Set[m])
-    #     end
-    #   end
-    #
+    describe "associations" do
+      let(:game) { Game.create!(valid_attrs) }
+
+      describe "manufacturers" do
+
+        it "should have a manufacturers attribute" do
+          expect(game).to respond_to(:manufacturers)
+        end
+
+        it "should have the correctly associated manufacturers" do
+          m = game.manufacturers.create!(company: "Atari", region: "US")
+          expect(game.manufacturer_ids.to_set).to eq(Set[m.id])
+          expect(game.manufacturers.to_set).to eq(Set[m])
+        end
+      end
+
     #   describe "likes" do
     #
     #     it "should have a likes attribute" do
@@ -77,6 +77,6 @@ describe Game do
     #       expect(game.likes.size).to eq(game.likes_count)
     #     end
     #   end
-    # end
+    end
   end
 end

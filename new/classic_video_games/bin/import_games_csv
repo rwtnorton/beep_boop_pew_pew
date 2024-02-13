@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+lib = File.expand_path('../../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'games_csv_etl'
+
+CSV_FILE = if ARGV.empty?
+             ## i.e., $rails_root/../games.csv
+             File.expand_path('../../../games.csv', __FILE__)
+           else
+             ARGV[0]
+           end
+abort "File does not exist: #{CSV_FILE}" unless File.exist?(CSV_FILE)
+
+loader = GamesCSV::Loader.new(open(CSV_FILE))
+begin
+  loader.each do |record|
+    norm_rec = GamesCSV::Normalizer.normalize_record(record)
+    GamesCSV::Importer.import_record(norm_rec)
+  end
+rescue GamesCSV::MissingHeadersError => e
+  abort "Missing mandatory headers: #{e.message}"
+end

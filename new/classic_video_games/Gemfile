@@ -46,8 +46,6 @@ gem "bootsnap", require: false
 
 gem "rails-bootstrap"
 
-gem "jquery-rails"
-
 gem "will_paginate-bootstrap"
 
 gem "csv"

@@ -7,5 +7,6 @@ Rails.application.routes.draw do
 
   root to: 'games#index'
   resources :games, only: %i[index show]
+  match 'games/:id/like' => 'games#like', via: %i[post], constraints: {id: /\d+/}
 
 end

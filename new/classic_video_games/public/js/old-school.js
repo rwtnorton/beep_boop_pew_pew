@@ -19,3 +19,33 @@ function loadGameModalFromElem(elem) {
         document.querySelector('#gameModal #gameModalImage').innerHTML = '';
     }
 }
+
+document.querySelector('#likeButton').addEventListener('click', (event) => {
+    const remoteIP = document.querySelector('#remoteIP').getAttribute('data-ip');
+    console.log(`remoteip='${remoteIP}'`);
+    const gameID = document.querySelector('#gameModal #gameID').getAttribute('data-id');
+    const url = `/games/${gameID}/like`;
+    let elem = null;
+    document.querySelectorAll('.game-modal-trigger').forEach((e) => {
+        if (e.getAttribute('data-id') == gameID) {
+            elem = e;
+            return;
+        }
+    });
+    fetch(url, {
+        'method': 'POST',
+        'headers': {'Content-Type': 'application/json'},
+        'body': JSON.stringify({'remote-ip': remoteIP}),
+    }).then((response) => {
+        if (!elem) {
+            return;
+        }
+        if (response.status != 200 && response.status != 201) {
+            return;
+        }
+        const likes = parseInt(elem.getAttribute('data-game-likes-count'));
+        console.log(`old likes: ${likes}`);
+        elem.setAttribute('data-game-likes-count', likes+1);
+        loadGameModalFromElem(elem);
+    });
+});

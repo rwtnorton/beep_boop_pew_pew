@@ -1,0 +1,35 @@
+<%
+rows = [
+  {title: 'Name', game_attr_id: 'gameName'},
+  {title: 'Publication Year', game_attr_id: 'gamePublicationYear'},
+  {title: 'Notes', game_attr_id: 'gameNotes'},
+  {title: 'Publishers', game_attr_id: 'gamePublishers'},
+  {title: 'Active?', game_attr_id: 'gameIsActive'},
+  {title: 'Likes', game_attr_id: 'gameLikes'},
+]
+%>
+<div class="modal fade hidden" id="gameModal" tabindex="-1" role="dialog"
+     aria-labelledby="gameModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="hidden" id="gameID" data-id=""></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"
+                aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="gameModalLabel"><%= 'name' %></h4>
+      </div>
+      <div class="modal-body">
+        <% rows.each do |r| %>
+          <%= render partial: 'game_modal_row', locals: r %>
+        <% end %>
+        <div id="gameModalImage" />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary"
+                id="likeButton">Like</button>
+        <button type="button" class="btn btn-default"
+                data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

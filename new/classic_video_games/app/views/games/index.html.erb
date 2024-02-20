@@ -1,0 +1,36 @@
+<div class="hidden" id="remoteIP" data-ip="<%= request.remote_ip %>"></div>
+<%
+  header = %w[Name Year Publisher]
+%>
+
+
+<div class="flex flex-row justify-center items-center">
+  <table id="games" class="table auto border-collapse border border-amber-500">
+    <tr>
+      <% header.each do |s| %>
+        <th class="border border-amber-600 bg-amber-800 p-2"><%= s %></th>
+      <% end %>
+    </tr>
+    <% @games.each do |game| %>
+      <tr class="even:bg-zinc-800 odd:bg-zinc-900">
+        <td class="clickable border border-amber-700 p-2" data-id="<%= game.id %>" data-toggle="modal"
+            data-target="#gameModal"><%= game.name %></td>
+        <td class="border border-amber-700 p-2"><%= game.publication_year %></td>
+        <td class="border border-amber-700 p-2"><%= format_publisher(game) %></td>
+      </tr>
+    <% end %>
+  </table>
+
+</div>>
+
+<div class="text-center my-4 block">
+  <div role="navigation" aria-label="Pagination" class="px-3 py-2 mx-2 text-gray-700 no-underline bg-grey-950 rounded-lg">
+    <div class="flickr_pagination">
+      <div class="py-4">
+        <%= will_paginate @games %>
+      </div>
+    </div>
+  </div>
+</div>>
+
+<%= render partial: 'game_modal' %>

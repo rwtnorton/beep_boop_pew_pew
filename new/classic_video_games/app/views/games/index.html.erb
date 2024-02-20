@@ -15,7 +15,16 @@
         <td class="clickable border border-amber-700 p-2 game-modal-trigger"
             data-id="<%= game.id %>"
             data-modal-target="gameModal"
-            data-modal-toggle="gameModal"><%= game.name %></td>
+            data-modal-toggle="gameModal"
+            data-game-image-name="<%= game.image_name ? image_path(game.image_name) : %q{} %>"
+            data-game-name="<%= game.name %>"
+            data-game-publication-year="<%= game.publication_year %>"
+            data-game-notes="<%= game.notes %>"
+            data-game-publishers="<%= format_publisher(game) %>"
+            data-game-is-active="<%= game.is_active %>"
+            data-game-likes-count="<%= game.likes_count %>"
+            onclick="loadGameModalFromElem(this)"
+        ><%= game.name %></td>
         <td class="border border-amber-700 p-2"><%= game.publication_year %></td>
         <td class="border border-amber-700 p-2"><%= format_publisher(game) %></td>
       </tr>

@@ -12,8 +12,9 @@
     </tr>
     <% @games.each do |game| %>
       <tr class="even:bg-zinc-700 odd:bg-zinc-900">
-        <td class="clickable border border-amber-700 p-2" data-id="<%= game.id %>" data-toggle="modal"
-            data-target="#gameModal"><%= game.name %></td>
+        <td class="clickable border border-amber-700 p-2" data-id="<%= game.id %>"
+            data-modal-target="gameModal"
+            data-modal-toggle="gameModal"><%= game.name %></td>
         <td class="border border-amber-700 p-2"><%= game.publication_year %></td>
         <td class="border border-amber-700 p-2"><%= format_publisher(game) %></td>
       </tr>

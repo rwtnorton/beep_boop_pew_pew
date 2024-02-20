@@ -8,27 +8,35 @@ rows = [
   {title: 'Likes', game_attr_id: 'gameLikes'},
 ]
 %>
-<div class="modal fade hidden" id="gameModal" tabindex="-1" role="dialog"
+<div id="gameModal" tabindex="-1" role="dialog"
+     aria-hidden="true"
+     class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
      aria-labelledby="gameModalLabel">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog relative p-4 w-full max-w-2xl max-h-full" role="document">
     <div class="hidden" id="gameID" data-id=""></div>
-    <div class="modal-content">
-      <div class="modal-header">
+    <div class="modal-content relative bg-white rounded-lg shadow dark:bg-gray-700">
+      <div class="modal-header flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
         <button type="button" class="close" data-dismiss="modal"
-                aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="gameModalLabel"><%= 'name' %></h4>
+                aria-label="Close"
+                data-modal-hide="gameModal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close modal</span></button>
+        <h4 class="modal-title text-xl font-semibold text-gray-900 dark:text-white"
+            id="gameModalLabel"><%= 'name' %></h4>
       </div>
-      <div class="modal-body">
+      <div class="modal-body p-4 md:p-5 space-y-4">
         <% rows.each do |r| %>
           <%= render partial: 'game_modal_row', locals: r %>
         <% end %>
         <div id="gameModalImage" />
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary"
+      <div class="modal-footer flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+        <button type="button"
+                class="btn btn-primary text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 id="likeButton">Like</button>
-        <button type="button" class="btn btn-default"
-                data-dismiss="modal">Close</button>
+        <button type="button"
+                class="btn btn-default py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                data-modal-hide="gameModal">Close</button>
       </div>
     </div>
   </div>

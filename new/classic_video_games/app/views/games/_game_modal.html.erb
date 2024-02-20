@@ -25,9 +25,11 @@ rows = [
             id="gameModalLabel"><%= 'name' %></h4>
       </div>
       <div class="modal-body p-4 md:p-5 space-y-4">
+        <table class="table-fixed">
         <% rows.each do |r| %>
           <%= render partial: 'game_modal_row', locals: r %>
         <% end %>
+        </table>
         <div id="gameModalImage" />
       </div>
       <div class="modal-footer flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">

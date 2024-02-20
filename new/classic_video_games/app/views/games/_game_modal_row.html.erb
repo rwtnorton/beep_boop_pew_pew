@@ -1,4 +1,4 @@
-        <div class="row">
-          <div class="col-md-4 text-right"><strong><%= title %></strong></div>
-          <div class="col-md-8" id="<%= game_attr_id %>"></div>
-        </div>
+        <tr>
+          <td class="font-bold p-2"><%= title.gsub(/\s/, '_')  %></td>
+          <td id="<%= game_attr_id %>" class="p-2"></td>
+        </tr>

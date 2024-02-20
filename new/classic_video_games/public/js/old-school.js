@@ -22,7 +22,7 @@ function loadGameModalFromElem(elem) {
 
 document.querySelector('#likeButton').addEventListener('click', (event) => {
     const remoteIP = document.querySelector('#remoteIP').getAttribute('data-ip');
-    console.log(`remoteip='${remoteIP}'`);
+    // console.log(`remoteip='${remoteIP}'`);
     const gameID = document.querySelector('#gameModal #gameID').getAttribute('data-id');
     const url = `/games/${gameID}/like`;
     let elem = null;
@@ -44,7 +44,7 @@ document.querySelector('#likeButton').addEventListener('click', (event) => {
             return;
         }
         const likes = parseInt(elem.getAttribute('data-game-likes-count'));
-        console.log(`old likes: ${likes}`);
+        // console.log(`old likes: ${likes}`);
         elem.setAttribute('data-game-likes-count', likes+1);
         loadGameModalFromElem(elem);
     });
